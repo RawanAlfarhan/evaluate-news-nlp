@@ -1,3 +1,4 @@
+import {checkForName} from "./nameChecker"
 function handleSubmit(event) {
     event.preventDefault()
 
@@ -5,7 +6,7 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value
     checkForName(formText)
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
+    fetch('http://localhost:8081/test')
     .then(res => res.json())
     .then(function(res) {
         document.getElementById('results').innerHTML = `polarity: ${res.polarity},
@@ -15,7 +16,7 @@ function handleSubmit(event) {
         subjectivity_confidence: ${res.subjectivity_confidence}
         `
     })
-    let data={
+        let data={
         'text': document.getElementById('name').value
     }
 
