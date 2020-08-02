@@ -20,10 +20,10 @@ function handleSubmit(event) {
     } )
     .then(res => res.json())
     .then(function(res) {3
-        document.getElementById('results').innerHTML = `polarity: ${res.polarity},
-        subjectivity: ${res.subjectivity},
-        text:  ${res.text},
-        polarity_confidence:  ${res.polarity_confidence},
+        document.getElementById('results').innerHTML = `polarity: ${res.polarity},` +"<br />"+`
+        subjectivity: ${res.subjectivity},` +"<br />"+`
+        text:  ${res.text},` +"<br />"+`
+        polarity_confidence:  ${res.polarity_confidence},` +"<br />"+`
         subjectivity_confidence: ${res.subjectivity_confidence}
         `
     })
