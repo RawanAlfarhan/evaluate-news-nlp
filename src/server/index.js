@@ -8,17 +8,6 @@ var textapi = new AYLIENTextAPI({
   application_id: "50606da7",
   application_key: "912c120ae2c55c7f19dcc89ea24eb3ea"
 });
-/*
-// Require the Aylien npm package
-var aylienAPI = require('aylien_textapi')
-
-//Api credentials
-var textapi = new aylienAPI({
-    application_id: "00d7c105",
-    application_key: "a6fe41f54caac54007ef2802385ff05b"
-});
-
-*/
 
 const app = express()
 
@@ -42,7 +31,7 @@ app.get('/', function (req, res) {
 app.listen(8080, function () {
     console.log('Example app listening on port 8080!')
 })
-app.post('/testing', function (req, res) {
+app.post('/test', function (req, res) {
     textapi.sentiment({
       'url': req.body.text
   }, function(error, response) {
