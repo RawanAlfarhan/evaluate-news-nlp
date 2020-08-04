@@ -8,10 +8,11 @@ import './styles/header.scss'
 
 //import js files
 import { handleSubmit } from './js/formHandler'
-
+import { URLchecker } from './js/checkURL'
 
 export {
-    handleSubmit
+    handleSubmit,
+    URLchecker
    }
    
 
